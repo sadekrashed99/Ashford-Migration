@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00004c;
+  --color-on-primary: #ffffff;
+  --color-secondary: #bc0100;
+  --color-on-secondary: #ffffff;
+  --color-surface: #fcf9f8;
+  --color-surface-variant: #e5e2e1;
+  --color-background: #fcf9f8;
+  --color-outline: #767684;
+  --color-outline-variant: #c6c5d5;
+  --color-aussie-blue: #00004c;
+  --color-flag-red: #bc0100;
+  
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Source Serif 4", ui-serif, Georgia, serif;
+  
+  --animate-infinite-scroll: infinite-scroll 40s linear infinite;
+  --animate-pulse-ring: pulse-ring 2s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+  
+  @keyframes infinite-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.6);
+      opacity: 0;
+    }
+    30%, 40% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+}
+
+/* Base style resets and scrollbars */
+body {
+  font-family: var(--font-serif);
+  background-color: var(--color-background);
+  color: var(--color-aussie-blue);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fcf9f8;
+}
+::-webkit-scrollbar-thumb {
+  background: #00004c;
+  border-radius: 4px;
+}
+
+.aus-watermark {
+  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuByXEha1UccMzB51Z8UAeMuyWvHj4ESIZmvlp6nJdZmZ4xVFl_peagACGrHMgqCepwTJFjYliVS8f7r4ax0qlavHxjZunciehDCkwkSs_KPjbpFyj4A2XiSPIARIXAUVie9XApHQKiTvpUKYpsimf-vTiAJbgiXGUI195ktJC3wlJqLNk181GMzXutljet_xZBrt2qULqY6S0ochgCLXgSK0FXoFy0_weRgqh19bKJ9PAODS5DQnRIA0EWTnZuviDwGCrydenqFLD6v');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Custom fade animations */
+.fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

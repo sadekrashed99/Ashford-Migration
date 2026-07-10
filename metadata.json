@@ -1,0 +1,6 @@
+{
+  "name": "Commonwealth Legal",
+  "description": "Strategic immigration law counsel and automated pre-assessment portal for Australian visa streams.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
